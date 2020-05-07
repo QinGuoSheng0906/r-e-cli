@@ -1,0 +1,13 @@
+{
+  "name": "react-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "repository": "https://github.com/QinGuoSheng0906/r-e-cli.git",
+  "author": "张竞j <zhangjingj@zbj.com>"
+}
