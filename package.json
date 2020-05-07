@@ -8,6 +8,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2"
   },
+  "devDependencies": {},
   "repository": "https://github.com/QinGuoSheng0906/r-e-cli.git",
-  "author": "张竞j <zhangjingj@zbj.com>"
+  "author": "qinguosheng"
 }
