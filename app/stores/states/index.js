@@ -1,5 +1,7 @@
-/*
-   整合合并  satas 初始仓库
-   秦国胜
-   2020-05-07
-*/
+// 初始状态数据
+import citys from './citys';
+import jobs from './jobs';
+export {
+   citys,
+   jobs
+}

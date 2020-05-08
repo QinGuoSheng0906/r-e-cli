@@ -28,13 +28,13 @@ module.exports=merge(
                ],
                enforce: 'pre', // 编译前检查
                exclude: /node_modules/, // 不检测的文件
-               include: [ path.resolve(__dirname, 'src') ] // 指定检查的目录
+               include: [ path.resolve(__dirname, 'app') ] // 指定检查的目录
             }
          ]
       },
       plugins:[
          new StylelintWebpackPlugin({
-            context: 'src',
+            context: 'app',
             configFile: path.resolve(__dirname,'../.stylelintrc.js'),
             files: '**/*.(less|css)',
             failOnError: false,

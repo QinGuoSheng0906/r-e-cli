@@ -27,7 +27,7 @@ const happyThreadPool = HappyPack.ThreadPool({ size: 3 });
 module.exports={
    //输入
    entry: {
-      main: [ path.resolve(__dirname,'../src/index.jsx') ]
+      main: [ path.resolve(__dirname,'../app/index.jsx') ]
    },
    //输出
    output: {
@@ -43,7 +43,7 @@ module.exports={
          {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            include: [ path.resolve('./src') ],// 限定范围
+            include: [ path.resolve('./app') ],// 限定范围
             use:[ 'happypack/loader?id=babel','babel-loader?cacheDirectory' ]
          },
          {
@@ -77,7 +77,11 @@ module.exports={
                {
                   loader:'less-loader?sourceMap=true',
                   options:{
-                     javascriptEnabled: true
+                     lessOptions: {
+                        javascriptEnabled: true
+                     } 
+                
+                     // javascriptEnabled: true
                   }
                }
             ]
@@ -125,7 +129,7 @@ module.exports={
       }),
       // // 去除无用的样式
       // new PurgecssWebpackPlugin({
-      //    paths: glob.sync(path.join(__dirname, '../src/**/*'), { nodir: true })
+      //    paths: glob.sync(path.join(__dirname, '../app/**/*'), { nodir: true })
       // }),
       // 多线程打包
       new HappyPack({
@@ -148,13 +152,13 @@ module.exports={
    // 设置别名
    resolve: {
       // 指定以下目录寻找第三方模块，避免webpack往父级目录递归搜索
-      modules: [ path.resolve(__dirname, '../src'), path.resolve('node_modules') ],
+      modules: [ path.resolve(__dirname, '../app'), path.resolve('node_modules') ],
       alias: {
-         '@': path.resolve(__dirname, '../src'),
-         'assets': path.resolve(__dirname, '../src/assets'),
-         'components': path.resolve(__dirname, '../src/components'),
-         'pages': path.resolve(__dirname, '../src/pages/'),
-         'lib': path.resolve(__dirname, '../src/lib')
+         '@': path.resolve(__dirname, '../app'),
+         '@assets': path.resolve(__dirname, '../app/assets'),
+         '@components': path.resolve(__dirname, '../app/components'),
+         '@pages': path.resolve(__dirname, '../app/pages/'),
+         '@lib': path.resolve(__dirname, '../app/lib')
       },
       enforceExtension: false,
       extensions: [ '.js', '.jsx',  '.css', '.less' , '.json' ]
