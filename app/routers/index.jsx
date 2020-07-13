@@ -7,11 +7,11 @@ import React, { Component } from 'react';
 import { Route, Switch /* Redirect */ } from 'react-router-dom';
 import ErrorBoundary from './errorBoundary';  
 
-import { Main } from '@/components'                           // 容器组件 
-import Login from '@/pages/login';                                  // 登录组件单独处理
-import Err404 from '@/pages/404';                                   // 404
-import Home from '@/pages/home'
-import Hooks from '@/pages/hooks'
+import { Main } from '@components'                           // 容器组件 
+import Login from '@pages/login';                                  // 登录组件单独处理
+import Err404 from '@pages/404';                                   // 404
+import Home from '@pages/home'
+import Hooks from '@pages/hooks'
 class RouterApp extends Component {
    // 路由视图
    views = () => {

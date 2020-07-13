@@ -1,0 +1,21 @@
+{
+   "compilerOptions": {
+     "baseUrl": "./",
+     "paths": {
+       "@/*": ["app/*"],
+       "@components/*": ["app/components/*"],
+       "@actions/*": ["app/stores/actions/*"],
+       "@assets/*": ["app/assets/*"],
+       "@lib/*": ["app/lib/*"],
+       "@pages/*": ["app/pages/*"],
+     },
+     "target": "ES6",
+     "module": "commonjs",
+     "jsx": "react",
+     "allowSyntheticDefaultImports": true
+   },
+   "include": [
+     "src/**/*"
+   ],
+   "exclude": ["node_modules"]
+}

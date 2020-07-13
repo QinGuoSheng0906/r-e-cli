@@ -158,7 +158,8 @@ module.exports={
          '@assets': path.resolve(__dirname, '../app/assets'),
          '@components': path.resolve(__dirname, '../app/components'),
          '@pages': path.resolve(__dirname, '../app/pages/'),
-         '@lib': path.resolve(__dirname, '../app/lib')
+         '@lib': path.resolve(__dirname, '../app/lib'),
+         '@actions': path.resolve(__dirname, '../app/actions')
       },
       enforceExtension: false,
       extensions: [ '.js', '.jsx',  '.css', '.less' , '.json' ]
