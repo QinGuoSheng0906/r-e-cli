@@ -1,0 +1,299 @@
+/*
+   全局公共样式
+   秦国胜
+   2019-08-05
+*/
+
+@charset "utf-8";
+@theme-c-1abc9c: #1abc9c; // 主题色 深蓝色
+@theme-c-3e518b: #3e518b; // 主题色
+@c-302222: #302222; // 图标色
+@c-e24719: #e24719; // 图标色
+@c-E1E4ED: #E1E4ED; // 图标色
+@c-F4C11B: #F4C11B; // 图标色
+@c-1FD092: #1FD092; // 图标色
+
+// 像素变量
+@px-10: 10px;
+@px-12: 12px;
+@px-14: 14px;
+@px-15: 15px;
+@px-16: 16px;
+@px-18: 18px;
+@px-20: 20px;
+@px-24: 24px;
+@px-30: 30px;
+
+html,body {
+  /* 抗锯齿，使字体图标更清晰 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  // overflow-scrolling: touch;
+  height: 100%;
+  color: #313131;
+  font-size: 12px;
+}
+
+html,body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,img,div,a,b,s,i,span,
+header,article,nav,section,footer,form,input,select,option,textarea,
+button,label,table,tr,td,th,thead,tbody,tfoot,canvas,video,audio,svg {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", "Avenir", Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+img {
+  object-fit: cover;
+  vertical-align: bottom;
+  border: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+// 背景相关
+.b-c-E1E4ED{
+  background: #E1E4ED;
+}
+
+// 字体颜色相关
+.f-c-302222{
+  color: @c-302222
+}
+
+// 字体大小
+.f-s-12{
+  font-size: @px-12;
+}
+
+.f-s-14{
+  font-size: @px-14;
+}
+
+.f-s-16{
+  font-size: @px-16;
+}
+
+.f-s-18{
+  font-size: @px-18;
+}
+
+.f-s-20{
+  font-size: @px-20;
+}
+
+.f-s-24{
+  font-size: @px-24;
+}
+
+.f-s-30{
+  font-size: @px-30;
+}
+
+
+// 文本布局
+.t-j { // 两端对齐
+  text-align: justify;
+}
+
+.t-l {
+  text-align: left;
+}
+
+.t-c {
+  text-align: center;
+}
+
+.t-r {
+  text-align: right;
+}
+
+
+// 浮动
+.f-c::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.f-l {
+  float: left;
+}
+
+.f-r {
+  float: right;
+}
+
+// 内外边距
+
+.m-t-10{
+  margin-top: @px-10;
+}
+
+.m-t-15{
+  margin-top: @px-15;
+}
+
+.m-t-20{
+  margin-top: @px-20;
+}
+
+.m-r-10{
+  margin-right: @px-10;
+}
+
+.m-r-15{
+  margin-right: @px-15;
+}
+
+.m-r-20{
+  margin-right: @px-20;
+}
+
+.m-b-10{
+  margin-bottom: @px-10;
+}
+
+.m-b-15{
+  margin-bottom: @px-15;
+}
+
+.m-b-20{
+  margin-bottom: @px-20;
+}
+
+.m-l-10{
+  margin-left: @px-10;
+}
+
+.m-l-15{
+  margin-left: @px-15;
+}
+
+.m-l-20{
+  margin-left: @px-20;
+}
+
+.p-t-10{
+  padding-top: @px-10;
+}
+
+.p-t-15{
+  padding-top: @px-15;
+}
+
+.p-t-20{
+  padding-top: @px-20;
+}
+
+.p-r-10{
+  padding-right: @px-10;
+}
+
+.p-r-15{
+  padding-right: @px-15;
+}
+
+.p-r-20{
+  padding-right: @px-20;
+}
+
+.p-b-10{
+  padding-bottom: @px-10;
+}
+
+.p-b-15{
+  padding-bottom: @px-15;
+}
+
+.p-b-20{
+  padding-bottom: @px-20;
+}
+
+.p-l-10{
+  padding-left: @px-10;
+}
+
+.p-l-15{
+  padding-left: @px-15;
+}
+
+.p-l-20{
+  padding-left: @px-20;
+}
+
+// 超出宽度省略号
+.spill {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 水平垂直居中  -- 定位
+.layout-position-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%) ;
+  transform: translate(-50%,-50%);
+}
+
+// 水平垂直居中  -- table  外部父级必须有固定的宽高。
+.layout-table-center{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+// flex-box布局布局相关
+.layout-flex{
+  display: flex;
+}
+
+// 水平垂直居中  -- 弹性布局
+.layout-flex-center{
+  .layout-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 水平两端布局 -- 弹性布局
+.layout-space-between{
+  .layout-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 边框线 解决一像素问题 底部边框一像素
+.border-1px:after{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #44B3E1;
+  transform-origin: 0 0;
+  transform: scaleY(0.5); // 纵向缩放
+}
+
+
+#root {
+  height: 100%;
+}

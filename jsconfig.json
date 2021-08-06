@@ -2,12 +2,14 @@
    "compilerOptions": {
      "baseUrl": "./",
      "paths": {
-       "@/*": ["app/*"],
-       "@components/*": ["app/components/*"],
-       "@actions/*": ["app/stores/actions/*"],
-       "@assets/*": ["app/assets/*"],
-       "@lib/*": ["app/lib/*"],
-       "@pages/*": ["app/pages/*"],
+       "@/*": ["client/*"],
+       "@components/*": ["client/components/*"],
+       "@actions/*": ["client/stores/actions/*"],
+       "@assets/*": ["client/assets/*"],
+       "@images/*": ["client/assets/images/*"],
+       "@lib/*": ["client/lib/*"],
+       "@enums/*": ["client/lib/enums*"],
+       "@pages/*": ["client/pages/*"],
      },
      "target": "ES6",
      "module": "commonjs",
@@ -15,7 +17,7 @@
      "allowSyntheticDefaultImports": true
    },
    "include": [
-     "src/**/*"
+     "client/**/*"
    ],
    "exclude": ["node_modules"]
 }

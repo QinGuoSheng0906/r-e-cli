@@ -1,0 +1,59 @@
+.login{
+   position: relative;
+   height: 100%;
+   background: url('../../assets/images/bg-4.jpg') no-repeat center center;
+   background-size: 100% 100%;
+
+   .login-title{
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06) ;
+      font-weight: 600;
+      text-align: center;
+      background: linear-gradient(to right, red, blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+  }
+
+   .login-container{
+      top: 40%;
+      width: 500px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 30px 2px rgba(0,0,0,.6);
+      .login-form{
+         padding: 30px 30px 40px;
+      }
+      .login-code{
+         height: 32px;
+         border: 1px solid #d9d9d9;
+         border-radius: 2px;
+         text-align: center;
+         line-height: 32px;
+         svg{
+            position: relative;
+            top: -3px;
+         }
+      }
+
+      .submit-btn{
+         width: 100%;
+         height: 36px;
+         font-size: 18px;
+         font-weight: 600;
+         line-height: 10px;
+      }
+
+      .login-footer{
+         .login-register:hover,.login-password:hover{
+            color: #1890ff;
+            cursor: pointer;
+         }
+      }
+   }
+   .forget-password-phone{
+      .ant-form-item{
+         margin-bottom: 0;
+      }
+   }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>接口请求</h1>
+   <div id="root"></div>
+   <p>
+      <button onclick="getHero()">查询英雄</button>
+   </p>
+   <p>
+      <button onclick="addHero()">添加英雄</button>
+   </p>
+   <script>
+     function addHero () {
+         let data = { 
+            name : '浩克屋大爸',
+            age : 488,
+            sex : '男',
+            address : '美国',
+            dowhat : '丢丢丢',
+            imgArr:[],
+            favourite: '薯片2',
+            explain: '博士3'
+         };
+         let req = new Request('http://localhost:8888/hero/addHero', {
+            method: 'POST', 
+            cache: 'reload',
+            body: JSON.stringify(data),
+            headers: new Headers({
+               'Content-Type': 'application/json'
+            })
+         });
+         fetch(req)
+            .then(function(response) {
+               return response.json();
+            })
+            .then((data) => {
+               view(data)
+            })
+            .catch(e => {
+               console.log(e)
+            })
+         let view = (data) => {
+            let root = document.getElementById('root');
+            root.innerText = '我是请求的文本text：'+ data.message
+         }
+      }
+     function getHero () {
+      let reqs = new Request('http://localhost:8888/hero/getHero', {
+         method: 'GET', 
+         cache: 'reload',
+         // body: JSON.stringify(data),
+         headers: new Headers({
+            'Content-Type': 'application/json'
+         })
+      });
+      fetch(reqs)
+         .then(function(response) {
+            return response.json();
+         })
+         .then((data) => {
+           console.log('英雄数据', data)
+         })
+         .catch(e => {
+            console.log(e)
+         })
+     } 
+   </script>
+</body>
+</html>
